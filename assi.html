@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="" id="surveyForm" onsubmit="return validateForm()">
+    <label for="name">Patient Name : </label>
+    <input type="text" id="name" name="name" required>
+    <label for="fileNumber"> Patient File Number : </label>
+    <input type="text" name="fileNumber" id="fileNumber" required>
+
+    <label for="unit">Which Unit of the Hospital: </label>
+    <select name="unit" id="unit" required>
+        <option value="">Select One</option>
+        <option value="">Surgery </option>
+        <option value="">Medicine</option>
+        <option value="">Pediatrics</option>
+        <option value="">Obstetrics</option>
+
+    </select>
+
+    <label for="">Are you satisfied with overall treatment:</label>
+
+    <div>
+        <input type="radio" id="verySatisfied" name="overallTreatment" value="verySatisfied" required>
+        <label for="verySatisfied">Very satisfied</label>
+    </div>
+
+    <div>
+        <input type="radio" id="satisfied" name="overallTreatment" value="satisfied">
+        <label for="satisfied">satisfied</label>
+    </div>
+
+    <div>
+        <input type="radio" id="notSatisfied" name="overallTreatment" value="notSatisfied">
+        <label for="notSatisfied">Not satisfied</label>
+
+    </div>
+
+    <label >Are you satisfied with medical facilities in the Hospital: </label>
+        <div>
+            <input type="radio" id="verySatisfiedFacilities" name="facilities" value="verySatisfied" required>
+            <label for="verySatisfiedFacilities">Very satisfied</label>
+
+        </div>
+
+        <div>
+            <input type="radio" id="satisfiedFacilities" name="facilities" value="satisfied">
+            <label for="satisfiedFacilities"> satisfied</label>
+        </div>
+
+        <div>
+            <input type="radio" id="notSatisfiedFacilites" name="facilities" value="notSatisfied">
+            <label for="notSatisfiedFacilites">Not satisfied</label>
+        </div>
+
+        <label for="comments"> overall comments</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        
+
+    </form>
+<!-- <script>
+    function validateForm(){
+        var name = document.forms["surveyForm"]["name"].value;
+        var fileNumber = document.forms["surveyForm"]["fileNumber"].value
+        var unit = document.forms["surveyForm"]["fileNumber"].value
+        var unit = document.forms["surveyForm"]["unit"].value
+        var overallTreatment = document.querySelector('input[name="overallTreatment"]:checked');
+        var facilities = document.querySelector('input[name="facilities"]:checked');
+
+        if (name == "" || fileNumber == "" || unit == "" || overallTreatment == null || facilities == null) {
+            alert("Please fill all details")
+            return false;
+            
+        }
+
+    }
+</script> -->
+</body>
+</html>
